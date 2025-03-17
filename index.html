@@ -16,76 +16,78 @@
     />
   </head>
   <style>
-    .header {
+    * {
+      border: 0;
       margin: 0;
-      font-size: 20px;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
-      background-color: #fff;
-    }
-    .benim-logom {
-      border-radius: 20px;
-      width: 220px;
-      height: 30px;
-      text-align: center;
-      padding: 1px;
-      justify-content: space-between;
-    }
-    .main-menu-list {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      font-family: "Rubik Vinyl", serif;
-      border-radius: 20px;
-      gap: 30px;
-    }
-
-    .main-menu-list li {
-      font-size: 24px;
-      margin: 5px;
-    }
-    .main-menu-list a {
-      text-decoration: none;
-      color: #1a2130;
+      box-sizing: border-box;
     }
     body {
       background-image: url("./backround-image/backround-2.jpg");
-
       background-position: center;
       background-size: cover;
+      overflow: hidden;
     }
-    .main-menu-list a:hover {
+
+    /*HEADER*/
+
+    .header {
+      width: 100%;
+      background: #000000;
+      height: 50;
+      overflow: hidden;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar .main-list {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+    .navbar .main-list li {
+      list-style: none;
+      font-size: 26px;
+      padding: 0 20px;
+    }
+    .navbar .main-list li a {
+      text-decoration: none;
       color: #fff;
     }
-    .main-menu-list a:hover {
-      background-color: #1a2130;
-      border-radius: 10px;
-      transition: all 0.5s ease;
+    .navbar .main-icon{
+      
+      align-items: center;
     }
-    ul.main-menu-list li.main-list-item a:visited {
-      background-color: #ffeea9;
-    }
-    .main-menu-list a:active {
-      color: black;
+
+    /*MEDİA QUERİES*/
+
+    @media (max-width: 497px) {
+      .navbar {
+        flex-direction: column;
+        font-size: 16px;
+        align-items: center;
+      }
+      .navbar .main-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .navbar .main-icon{
+        align-items: center;
+      }
     }
   </style>
   <body>
     <header class="header">
       <nav class="navbar">
-        <div class="benim-logom">
-          <i class="fa-solid fa-user fa-flip fa-lg" style="color: #74c0fc"></i>
-        </div>
-
-        <ul class="main-menu-list">
-          <li class="main-list-item"><a href="Hakkımda">Hakkımda</a></li>
-          <li class="main-list-item"><a href="Beceriler">Beceriler</a></li>
-          <li class="main-list-item"><a href="Projeler">Projeler</a></li>
-          <li class="main-list-item"><a href="İletişim">İletişim</a></li>
+        <a href="#" class="main-icon"><i class="fa-solid fa-house"></i></a>
+        <ul class="main-list">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
